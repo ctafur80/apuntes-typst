@@ -35,6 +35,11 @@
 }
 
 
+#import "@preview/codly:1.1.1": *
+#import "@preview/codly-languages:0.1.1": *
+#show: codly-init.with()
+#codly(languages: codly-languages)
+
 
 
 
@@ -49,23 +54,17 @@
 // -------------------------------------------------------
 = Introducción
 
-Desde hace tiempo, vengo pensando en Typst como una alternativa moderna a
-TeX y LaTeX. He probado varios lenguajes pero no terminaba de convencerme
-ninguno, pues, en la mayoría de los casos, se trataba de lenguajes con poca
-expresividad y recursos.
 
-Muchos de estos son lo que se suele llamar lenguajes de marcado ligero, como
-es el caso del famoso Markdown o de otros con algo más de riqueza, como
-pueden ser reStructuredText o Djot. En cualquier caso, estos lenguajes
-tienen bastantes limitaciones en cuanto a las opciones que proporcionan.
 
-No digo que esto tenga que ser malo para todo el mundo. Simplemente, lo es
-para mí, que deseo hacer un uso algo intensivo de la tipografía TKTK.
+```rust
+pub fn main() {
+    println!("Hello, world!");
+}
+```
 
-Hay quien no requiere de funcionalidades avanzadas en este sentido. Por
-ejemplo, alguien que escriba un libro de historia.
 
-También, hay quien cree que un documento no debería ser programable. TKTK.
+#include("fuentes/introduccion.typ")
+
 
 
 
@@ -74,14 +73,8 @@ También, hay quien cree que un documento no debería ser programable. TKTK.
 
 = _Hacks_
 
-Creo que Typst tiene un fallo de diseño en la gestión de las etiquetas de
-las ecuaciones. No es tan grave, pero sí que es molesto. En principio, la
-única forma que se tiene de gestionar las etiquetas es activando la
-numeración para todas las ecuaciones que se muestren. Esto es algo molesto y
-hay quien prefiere que se numeren solo las ecuaciones a las que se hace
-referencia. Para esto, se puede hacer lo que explican en
-#link("https://forum.typst.app/t/how-to-conditionally-enable-equation-numbering-for-labeled-equations/977/14")[este
-enlace].
+#include("fuentes/hacks.typ")
+
 
 
 
