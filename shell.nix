@@ -24,7 +24,7 @@ in
         buildInputs = with pkgs; [
             typst
             typstyle
-            # tinymist
+            tinymist
             # tree-sitter-grammars.tree-sitter-typst
 
             git

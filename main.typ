@@ -2,11 +2,16 @@
 
 // Preámbulo
 // -------------------------------------------------------
+
 #set text(
   lang: "es",
-  fill: rgb("ccc9d6"),
 )
 
+
+// #show raw: set text(font: "JetbrainsMono")
+
+
+// Modo tablet
 #set page(
   paper: "a5",
   margin: (x: 0.2cm, y: 0.4cm),
@@ -14,11 +19,55 @@
   fill: rgb("34324a"),
 )
 
+#set text(
+  // font: "PT Sans",
+  // size: 8pt,
+  fill: rgb("ccc9d6"),
+)
+
+
+// #show math.equation: set text(size: 9pt)
+// #show math.equation: set text(size: 9pt, font: "Noto Sans Math")
+
+
+/*
+// Modo libro
+#set page(
+  paper: "a4",
+  numbering: "1",
+)
+
+#set text(
+  // font: "PT Sans",
+  // size: 10pt,
+)
+
+// #show math.equation: set text(size: 10pt)
+*/
+
+
+
+
+
+
+
 #set par(
   // first-line-indent: 1em,
-  // justify: true,
+  justify: true,
   leading: 0.52em,
 )
+
+
+/*
+#show heading: it => [
+  #set text(
+    13pt,
+    weight: "bold",
+    font: "Arial",
+  )
+  #block(it.body)
+]
+*/
 
 #set heading(numbering: "1.")
 
@@ -46,35 +95,25 @@
 
 
 
-
-
-
-#outline()
-
+// Texto
 // -------------------------------------------------------
+
+#include("fuentes/titulo.typ")
+
+
 = Introducción
-
-
-
-```rust
-pub fn main() {
-    println!("Hello, world!");
-}
-```
-
-
 #include("fuentes/introduccion.typ")
 
 
-
-
-
-
-
 = _Hacks_
-
 #include("fuentes/hacks.typ")
 
+
+= Otros
+#include("fuentes/otros.typ")
+
+= Coeficientes binómicos
+#include("fuentes/coef-binom.typ")
 
 
 

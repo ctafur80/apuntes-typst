@@ -1,6 +1,24 @@
 
 
 
+
+
+```rust
+pub fn main() {
+    println!("Hello, world!");
+}
+```
+
+También, se puede presentar código Python:
+
+```python
+print("Hello, world!")
+```
+
+
+El símbolo de conjunto vacío es: #sym.emptyset
+
+
 Desde hace tiempo, vengo pensando en Typst como una alternativa moderna a
 TeX y LaTeX. He probado varios lenguajes pero no terminaba de convencerme
 ninguno, pues, en la mayoría de los casos, se trataba de lenguajes con poca
