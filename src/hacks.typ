@@ -1,5 +1,10 @@
 
 
+
+#import "@local/ctafur-maths-template:0.1.0": *
+
+
+
 Creo que Typst tiene un fallo de diseño en la gestión de las etiquetas de
 las ecuaciones. No es tan grave, pero sí que es molesto. En principio, la
 única forma que se tiene de gestionar las etiquetas es activando la

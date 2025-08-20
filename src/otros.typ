@@ -1,4 +1,8 @@
 
+#import "@local/ctafur-maths-template:0.1.0": *
+
+
+
 
 #rect(fill: aqua.lighten(40%))[#text(fill: red)[HOLA ESTO]]
 

@@ -1,4 +1,5 @@
 
+#import "@local/ctafur-maths-template:0.1.0": *
 
 
 
@@ -16,7 +17,8 @@ print("Hello, world!")
 ```
 
 
-El símbolo de conjunto vacío es: #sym.emptyset
+El símbolo de conjunto vacío es: #sym.emptyset. Si se encuentra en modo
+matemático, no habría que precederlo de `#sym`.
 
 
 Desde hace tiempo, vengo pensando en Typst como una alternativa moderna a

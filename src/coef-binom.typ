@@ -1,4 +1,6 @@
 
+#import "@local/ctafur-maths-template:0.1.0": *
+
 
 
 == Algunas identidades
@@ -102,7 +104,7 @@ cosa que no sucede para ninguno de los que constituyen a $D_k$. Además,
 entre ambos, forman todos los subconjuntos posibles de $k$ elementos de $S$,
 es decir, $S_k$. Es decir,
 
-$ S_k = D_k union F_k " y " D_k sect F_k = emptyset $
+$ S_k = D_k union F_k " y " D_k inter F_k = emptyset $
 
 Debido a esto, $D_k$ y $F_k$ forman una partición de $S_k$, tal y como
 pretendíamos. Por tanto, se tiene que
