@@ -3,26 +3,11 @@
 
 
 
-
-
 ## Introducción
 
-```rust
-pub fn main() {
-    println!("Hello, world!");
-}
-```
-
-También, se puede presentar código Python:
-
-```python
-print("Hello, world!")
-```
-
-
-El símbolo de conjunto vacío es: #sym.emptyset. Si se encuentra en modo
-matemático, no habría que precederlo de `#sym`.
-
+Typst es un sistema de composición tipográfica de gran calidad, sobretodo en
+textos con gran profusión de simbología matemática. Dicho esto, quizás le
+suele a que es algo similar a TeX; así es.
 
 Desde hace tiempo, vengo pensando en Typst como una alternativa moderna a
 TeX y LaTeX. He probado varios lenguajes pero no terminaba de convencerme
@@ -43,8 +28,8 @@ ejemplo, alguien que escriba un libro de historia.
 También, hay quien cree que un documento no debería ser programable. TKTK.
 
 
-
-// Añadir la explicación siguiente: https://www.youtube.com/watch?v=kI2e0o3sIVM
+<!-- TODO Añadir la explicación siguiente:
+https://www.youtube.com/watch?v=kI2e0o3sIVM -->
 
 
 

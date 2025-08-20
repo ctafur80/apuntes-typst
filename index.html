@@ -140,15 +140,9 @@ de consulta</a></li>
 </nav>
 <section id="introducción" class="level1">
 <h1>Introducción</h1>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode rust"><code class="sourceCode rust"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> main() <span class="op">{</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">&quot;Hello, world!&quot;</span>)<span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>También, se puede presentar código Python:</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div>
-<p>El símbolo de conjunto vacío es: #sym.emptyset. Si se encuentra en
-modo matemático, no habría que precederlo de <code>#sym</code>.</p>
+<p>Typst es un sistema de composición tipográfica de gran calidad,
+sobretodo en textos con gran profusión de simbología matemática. Dicho
+esto, quizás le suele a que es algo similar a TeX; así es.</p>
 <p>Desde hace tiempo, vengo pensando en Typst como una alternativa
 moderna a TeX y LaTeX. He probado varios lenguajes pero no terminaba de
 convencerme ninguno, pues, en la mayoría de los casos, se trataba de
@@ -165,8 +159,8 @@ TKTK.</p>
 Por ejemplo, alguien que escriba un libro de historia.</p>
 <p>También, hay quien cree que un documento no debería ser programable.
 TKTK.</p>
-<p>// Añadir la explicación siguiente:
-https://www.youtube.com/watch?v=kI2e0o3sIVM</p>
+<!-- TODO Añadir la explicación siguiente:
+https://www.youtube.com/watch?v=kI2e0o3sIVM -->
 </section>
 <section id="hacks" class="level1">
 <h1><em>Hacks</em></h1>
@@ -176,9 +170,19 @@ principio, la única forma que se tiene de gestionar las etiquetas es
 activando la numeración para todas las ecuaciones que se muestren. Esto
 es algo molesto y hay quien prefiere que se numeren solo las ecuaciones
 a las que se hace referencia. Para esto, se puede hacer lo que explican
-en <a
-href="https://forum.typst.app/t/how-to-conditionally-enable-equation-numbering-for-labeled-equations/977/14%22">este
-enlace</a>.</p>
+<a
+href="https://forum.typst.app/t/how-to-conditionally-enable-equation-numbering-for-labeled-equations/977/14">aquí</a>,
+es decir,</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode typst"><code class="sourceCode typst"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">#set</span> <span class="va">math</span>.equation<span class="op">(</span>numbering<span class="op">:</span> <span class="st">&quot;(1)&quot;</span><span class="op">)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">#show</span> math<span class="op">.</span>equation<span class="op">:</span> it =&gt; {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  if it.block and not it.has(&quot;label&quot;) [</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">#</span>counter<span class="op">(</span>math<span class="op">.</span>equation<span class="op">).</span>update<span class="op">(</span>v <span class="op">=&gt;</span> v <span class="op">-</span> <span class="dv">1</span><span class="op">)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">#</span>math<span class="op">.</span>equation<span class="op">(</span>it<span class="op">.</span>body<span class="op">,</span> block<span class="op">:</span> <span class="bu">true</span><span class="op">,</span> numbering<span class="op">:</span> <span class="bu">none</span><span class="op">)</span><span class="kw">#</span>label<span class="op">(</span><span class="st">&quot;&quot;</span><span class="op">)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  ] else {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    it</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  }  </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </section>
 <section id="paquetes-y-plantillas" class="level1">
 <h1>Paquetes y plantillas</h1>
@@ -218,23 +222,25 @@ se hace</a>.</p>
 </section>
 <section id="otros" class="level1">
 <h1>Otros</h1>
-<pre><code>#rect(fill: aqua.lighten(40%))[#text(fill: red)[HOLA ESTO]]</code></pre>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode typst"><code class="sourceCode typst"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">#</span>rect<span class="op">(</span>fill<span class="op">:</span> aqua<span class="op">.</span>lighten<span class="op">(</span><span class="fl">40%</span><span class="op">))[</span><span class="kw">#</span>text<span class="op">(</span>fill<span class="op">:</span> red<span class="op">)[</span>HOLA ESTO<span class="op">]]</span></span></code></pre></div>
 <p>Ahora no.</p>
-<pre><code>#show table.cell.where(y: 0): strong
-
-#table(
-  align: right,
-  columns: 5 * (1fr,),
-
-  table.header([uno], [dos], [tres], [cuatro], [cinco]),
-
-  // Contenido de la tabla
-  ..for x in range(1, 10) {
-    for y in range(1, 6) {
-      (str(x*y),)
-    }
-  }
-)</code></pre>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode typst"><code class="sourceCode typst"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">#show</span> table<span class="op">.</span>cell<span class="op">.</span>where<span class="op">(</span>y<span class="op">:</span> <span class="dv">0</span><span class="op">):</span> strong</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">#</span>table<span class="op">(</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  align<span class="op">:</span> right<span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  columns<span class="op">:</span> <span class="dv">5</span> * <span class="op">(</span><span class="fl">1fr</span><span class="op">,),</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  table<span class="op">.</span>header<span class="op">([</span>uno<span class="op">],</span> <span class="op">[</span>dos<span class="op">],</span> <span class="op">[</span>tres<span class="op">],</span> <span class="op">[</span>cuatro<span class="op">],</span> <span class="op">[</span>cinco<span class="op">]),</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Contenido de la tabla</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  ..<span class="cf">for</span> x <span class="cf">in</span> range<span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">10</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="cf">in</span> range<span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">6</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="op">(</span>str<span class="op">(</span>x*y<span class="op">),)</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="op">)</span></span></code></pre></div>
 <p>Algo que es muy útil es consultar, en la documentación oficial, los
 símbolos existentes. Se pueden consultar <a
 href="https://typst.app/docs/reference/symbols/sym/">aquí</a>.</p>

@@ -5,13 +5,13 @@
 
 ## Otros
 
-```
+```typst
 #rect(fill: aqua.lighten(40%))[#text(fill: red)[HOLA ESTO]]
 ```
 
 Ahora no.
 
-```
+```typst
 #show table.cell.where(y: 0): strong
 
 #table(
