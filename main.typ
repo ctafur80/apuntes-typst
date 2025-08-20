@@ -65,9 +65,16 @@
 #include("src/hacks.typ")
 
 
+= Paquetes y plantillas
+#include("src/paq-templ.typ")
+
+
 = Otros
 #include("src/otros.typ")
 #include("src/otros2.typ")
+
+
+
 
 
 = Coeficientes binómicos

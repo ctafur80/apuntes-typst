@@ -28,24 +28,6 @@ creación de lo que en el mundo TeX llaman entornos.
 
 
 
-== Paquetes y plantillas
-
-Al igual que LaTeX, Typst cuenta con un repositorio con paquetes
-(_packages_) y plantillas (_templates_) con el que podrá lograr fácilmente
-textos muy avanzados, con gráficos, etc. El repositorio oficial de Typst
-recibe el nombre de [Typst Universe][].
-
-[Typst Universe]: https://typst.app/universe/
-
-Al contrario de lo que sucede con TeX y sus formatos, crear un paquete
-básico o una plantilla para Typst no es complicado.
-
-La explicación de cómo promocionar (_submit_) un paquete o plantilla a Typsy
-Universe está en el [repositorio][repo-packages] oficial de Typst a este
-respecto.
-
-[repo-packages]: https://github.com/typst/packages
-
 
 
 
@@ -89,7 +71,7 @@ texto normal, es decir, el del cuerpo de texto.
 Hay un _issue_ de GitHub sobre esta cuestión, solo que aún están debatiendo
 sobre si es recomendable que tenga este comportamiento o no.
 
-<https://github.com/typst/typst/issues/366>
+// https://github.com/typst/typst/issues/366
 
 
 
