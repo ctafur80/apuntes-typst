@@ -134,8 +134,3 @@ Typst: documentos programables.
 
 
 
-<!-- TODO Añadir la explicación siguiente:
-https://www.youtube.com/watch?v=kI2e0o3sIVM -->
-
-
-
