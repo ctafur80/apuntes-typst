@@ -140,25 +140,104 @@ de consulta</a></li>
 </nav>
 <section id="introducción" class="level1">
 <h1>Introducción</h1>
-<p>Typst es un sistema de composición tipográfica de gran calidad,
-sobretodo en textos con gran profusión de simbología matemática. Dicho
-esto, quizás le suele a que es algo similar a TeX; así es.</p>
-<p>Desde hace tiempo, vengo pensando en Typst como una alternativa
-moderna a TeX y LaTeX. He probado varios lenguajes pero no terminaba de
-convencerme ninguno, pues, en la mayoría de los casos, se trataba de
-lenguajes con poca expresividad y recursos.</p>
-<p>Muchos de estos son lo que se suele llamar lenguajes de marcado
-ligero, como es el caso del famoso Markdown o de otros con algo más de
-riqueza, como pueden ser reStructuredText o Djot. En cualquier caso,
-estos lenguajes tienen bastantes limitaciones en cuanto a las opciones
-que proporcionan.</p>
-<p>No digo que esto tenga que ser malo para todo el mundo. Simplemente,
-lo es para mí, que deseo hacer un uso algo intensivo de la tipografía
-TKTK.</p>
-<p>Hay quien no requiere de funcionalidades avanzadas en este sentido.
-Por ejemplo, alguien que escriba un libro de historia.</p>
-<p>También, hay quien cree que un documento no debería ser programable.
-TKTK.</p>
+<p>Como alguien que se toma muy en serio la documentación sobre muchas
+de las cosas que aprende, he estado durante bastante tiempo buscando un
+sustituto de TeX para los textos con simbología matemática algo
+avanzada; sobretodo uno que pueda producir salida en formato web
+—principalmente, HTML y CSS—, que considero que es mejor que el PDF.</p>
+<p>Al no encontrar alternativas fuera de TeX (lo único que encontraba
+eran formatos nuevos de TeX o reimplementaciones de LaTeX), traté de ver
+si se podían extender las posibilidades de los generadores de sitios
+estáticos (<em>static-site generators</em> o SSGs), que normalmente se
+han usado para documentación técnica que no requiera de gran complejidad
+tipográfica. Los SSGs se basan casi siempre en textos hechos con algún
+lenguaje de marcado ligero (<em>lightweight markup language</em> o LML),
+y lo normal es que produzcan su salida en formato web.</p>
+<p>A este respecto quizás Pandoc sea una excepción. Aunque, tal y como
+comentan en <a href="https://pandoc.org/">su propia web</a>, este más
+que un SSG es un conversor universal de formatos de documentación, como
+son DOCX, Markdown, HTML, PDF, etc., vi que hay quien saca gran provecho
+de Pandoc y lo ha usado para crear documentos de matemáticas.</p>
+<p>De entre mi documentación, la que no requiere de simbología
+matemática avanzada la llevo haciendo desde hace ya bastante tiempo en
+Markdown con Pandoc, así que esta transición me resultaría bastante
+natural. Lo único es que la realidad no fue tan bonita como
+imaginaba:</p>
+<ul>
+<li>De entre los lenguajes que admite Pandoc, el que cuenta con más
+posibilidades para extenderlo para textos de matemáticas es el
+<q>sabor</q> de Pandoc de Markdown<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>, o, en todo caso, Djot,
+que es casi como el anterior. Es un lenguaje que para ciertas cosas
+parece muy poco expresivo o <q>rico</q>.</li>
+<li>Aunque se pueda usar código TeX para las partes de simbología
+matemática, hay problemas con los paquetes (<em>packages</em>),
+TKTK.</li>
+<li>TKTK</li>
+</ul>
+<p>Markdown fue creado en 2004 por John Gruber, con colaboración de
+Aaron Schwartz. Por ese entonces, ya existían otros LMLs que, como
+proyectos, parecían más serios, como AsciiDoc y reStructuredText. Digo
+que son más serios porque a Gruber se le ha criticado por no haber hecho
+nunca una especificación formal de Markdown. Como todo lenguaje, es
+difícil que no cuente en sus inicios con ambigüedades pero Gruber, por
+lo que parece, nunca se tomó muy en serio a su lenguaje. Cuando se le
+preguntaba sobre las ambigüedades o problemas que se presentaban al usar
+Markdown, Gruber respondía que bastaba con consultar cómo estaba
+implementado en el código del parseador (<em>parser</em>).</p>
+<p>Debido a esto, y a que Markdown de serie es muy básico, es decir, muy
+poco expresivo, fueron surgiendo implementaciones alternativas de
+Markdown. A estas las suelen llamar los <q>sabores</q>
+(<em>flavors</em>) de Markdown. En algunas se podían añadir notas a pie
+de página, simbología matemática TeX, etc. Son de destacar Markdown-it y
+la de Pandoc.</p>
+<p>Para tratar de poner orden en este caos, John MacFarlane, el creador
+de Pandoc, se tomó la molestia de hacer una especificación de un
+Markdown básico, al que llamó <a
+href="https://commonmark.org/">Commonmark</a>. Muchos de los parseadores
+de Markdown actualmente se basan en el estándar Commonmark.</p>
+<p>Posteriormente, MacFarlane trató de rehacer un Markdown mejorado, al
+que llamó <a href="https://djot.net/">Djot</a>. En realidad, tampoco me
+parece la panacea.</p>
+<!-- Ventajas frente a Markdown de Pandoc. Al fin y al cabo, como extensión
+de Markdown que es, se pierden ciertas ayudas como el resaltado de sintaxis
+para ciertas cosas, etc. -->
+<p>Finalmente, sobre 2020 unos desarrolladores alemanes comenzaron a
+crear Typst, algo similar a TeX pero adaptado a los tiempos modernos. El
+lenguaje que usa se llama también Typst y combina en cierto modo
+ligereza y expresividad, pues es adaptable en ciertos momentos
+(<em>syntactic sugar</em> TKTK).</p>
+<!-- Ventajas respecto a TeX y sus formatos: l lenguaje es más ligero en
+ciertas ocasiones, tienen previsto que tenga salida en formato web y que no
+sea algo supercomplicado, crear paquetes y plantillas es muy fácil ya que su
+lenguaje parece mucho mejor que TeX. -->
+<p>La funcionalidad (<em>feature</em>) que espero con más ansia del
+<em>software</em> Typst es la posibilidad de producir la salida en
+formato web; aunque esta aún no se ha logrado implementar del todo.</p>
+<p>Debe tener en cuenta que el estado actual de desarrollo de Typst es
+algo incipiente —actualmente, la versión 0.13—, pero TKTK.</p>
+<p>Una buena explicación introductoria podría ser <a
+href="https://www.youtube.com/watch?v=kI2e0o3sIVM">este vídeo</a> de
+Sylvan Franklin.</p>
+<hr />
+<p>Existe una cuestión que subyace estas dos filosofía: ¿Deberían ser
+programables los documentos? TKTK.</p>
+<hr />
+<p>Aunque me guste mucho Typst, no termino de desechar la idea de que
+algún día pueda haber un SSG con un lenguaje con el que se puedan crear
+textos de matemáticas de gran calidad. En realidad, sería algo bastante
+fácil de conseguir, pues no se trata más que de hacer un lenguaje que
+implemente de forma <q>ligera</q> algunos de los elementos HTML. Con
+esto y las plantillas CSS que cree, podría servir perfectamente.</p>
+<p>El lenguaje Pug trató de hacer esto pero abarcando demasiados de los
+elementos de HTML, ya que no era solo para documentos sino para webs de
+cualquier tipo.</p>
+<p>Quizás podría llegar ese día si CSS se sigue ampliando y ponen más
+foco en la creación de documentos. Por ejemplo, hacer tablas de
+contenidos automáticas, etc.</p>
+<p>Existen proyectos para hacer algo más completo que Markdown a partir
+de este. Por ejemplo, Quarkdown, aunque esto seguiría la filosofía de
+TeX y Typst: documentos programables.</p>
 <!-- TODO Añadir la explicación siguiente:
 https://www.youtube.com/watch?v=kI2e0o3sIVM -->
 </section>
@@ -295,6 +374,16 @@ class="uri">https://github.com/typst/typst/issues/366</a></p>
 </section>
 <section id="referencias" class="level1 unnumbered">
 <h1 class="unnumbered">Referencias</h1>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Al hablar del LML Markdown, hay que tener en cuenta la
+anarquía que ha existido siempre a este respecto; aunque esto no ha
+impedido que sea el LML con mayor aceptación.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 <!--</main>-->
 </body>
