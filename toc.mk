@@ -1,0 +1,79 @@
+
+CONTENTS := \
+fuentes/introduccion.mkd \
+fuentes/novedades-0.12.mkd \
+fuentes/fuentes-info.mkd \
+fuentes/historia.mkd \
+fuentes/mitos.mkd \
+fuentes/conceptos-basicos.mkd \
+    fuentes/linea-de-reposo.mkd \
+    fuentes/uso.mkd \
+    fuentes/configuracion-basica.mkd \
+    fuentes/remapeo-de-teclas.mkd \
+    fuentes/configuracion-segun-lenguaje.mkd \
+    fuentes/linea-de-estado.mkd \
+    fuentes/word-wrapping.mkd \
+    fuentes/buffer-ventana-y-pestana.mkd \
+    fuentes/variables.mkd \
+    fuentes/portapapeles-sistema.mkd \
+    fuentes/lista-quickfix.mkd \
+fuentes/conceptos-avanzados.mkd \
+    fuentes/resaltado.mkd \
+    fuentes/ejemplos-uso-avanzado.mkd \
+fuentes/config-basicas.mkd \
+    fuentes/espaciado-americano.mkd \
+fuentes/config-intermedias.mkd \
+    fuentes/tree-sitter.mkd \
+    fuentes/lsp.mkd \
+    fuentes/terminal.mkd \
+fuentes/acciones-basicas.mkd \
+    fuentes/modo-reemplazar.mkd \
+    fuentes/recargar-buffer.mkd \
+    fuentes/marcas.mkd \
+    fuentes/pliegues.mkd \
+    fuentes/moverse-por-archivos.mkd \
+    fuentes/buscar.mkd \
+    fuentes/movimientos-basicos.mkd \
+fuentes/acciones-intermedias.mkd \
+    fuentes/autocompletado.mkd \
+        fuentes/autocompletado-omnicompl.mkd \
+        fuentes/autocompletado-lsp.mkd \
+    fuentes/correccion-linguistica.mkd \
+    fuentes/actuar-sobre-varios-archivos.mkd \
+    fuentes/edicion-remota.mkd \
+    fuentes/insercion-multiple.mkd \
+    fuentes/editar-final-varios-renglones.mkd \
+    fuentes/patrones.mkd \
+    fuentes/formatear-codigo.mkd \
+    fuentes/vimgrep.mkd \
+    fuentes/autocompletado-copiando-texto.mkd \
+    fuentes/macros.mkd \
+    fuentes/retazos.mkd \
+    fuentes/registros.mkd \
+    fuentes/ampliar-seleccion-visual.mkd \
+    fuentes/configuracion-especifica-proyecto.mkd \
+fuentes/acciones-avanzadas.mkd \
+    fuentes/macro-regex.mkd \
+    fuentes/deshacer-con-ramas.mkd \
+    fuentes/multicursores.mkd \
+    fuentes/autocomandos.mkd \
+    fuentes/task-runner.mkd \
+fuentes/lenguajes.mkd \
+    fuentes/tex-y-sus-formatos.mkd \
+fuentes/plug-ins.mkd \
+    fuentes/gestion-diy-de-plugins.mkd \
+fuentes/otros.mkd \
+    fuentes/esquemas-de-colores.mkd \
+    fuentes/ctags.mkd \
+    fuentes/dap.mkd \
+    fuentes/herramientas.mkd \
+    fuentes/configuracion.mkd \
+    fuentes/demasiado-eficiente.mkd \
+    fuentes/neovim-vs-shell.mkd \
+    fuentes/neovim-vs-vscode.mkd \
+    fuentes/plantillas.mkd \
+    fuentes/configuracion-todo-sistema.mkd \
+    fuentes/concealing.mkd \
+    fuentes/editar-documentacion.mkd \
+    fuentes/gestion-archivos-minimal.mkd
+

@@ -1,0 +1,20 @@
+author: "Carlos E. Tafur Egido"
+metad-author: "Carlos E. Tafur Egido"
+lang: es
+otherlangs: en
+title: "Documentación sobre Typst"
+metad-title: "Documentación sobre Typst"
+date: 02/08/2025
+metad-date: 02/08/2025
+description: "Documentación sobre el sistema de composición tipográfica Typst."
+keywords:
+  - ciencias de la computación
+  - informática
+  - tipografía
+  - diseño
+  - documentación
+  - documentación técnica
+bibliography:
+  - ./referencias.yaml
+
+
